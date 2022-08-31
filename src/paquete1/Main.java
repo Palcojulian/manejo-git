@@ -7,6 +7,11 @@ public class Main {
         int num2 = 5;
         
         System.out.println("La suma de " + (num1 + num2));
-        
+     
+        int num3 = 30;
+        int num4 = 40;
+
+        System.out.println("La suma de este es" + (num3 + num4));
+        System.out.println("Ojo con este editor de codigo");
     }
 }
