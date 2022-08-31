@@ -1,17 +1,47 @@
 package paquete1;
 
+class Persona {
+    private String nombre;
+    private String apellido;
+
+    public Persona(String nombre, String apellido){
+        this.nombre = nombre;
+        this.apellido = apellido;
+    }
+
+    public void nombreCompleto(){
+        System.out.println(nombre + " " + apellido);
+    }
+    
+}
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("Hola Mundo");
-        int num1 = 4;
-        int num2 = 5;
-        
-        System.out.println("La suma de " + (num1 + num2));
-     
-        int num3 = 30;
-        int num4 = 40;
+        saludo();
+        int num1 = 23;
+        int num2 = 12;
+        System.out.println(sumar(num1, num2));
 
-        System.out.println("La suma de este es" + (num3 + num4));
-        System.out.println("Ojo con este editor de codigo");
+        Persona[] personas = new Persona[]{
+
+            new Persona("Julian", "Palco"),
+            new Persona("Esteban", "Guegue"),
+            new Persona("Carlos", "Guegue"),
+            new Persona("Pedro", "Molina")
+        };
+
+        for (Persona p : personas){
+            p.nombreCompleto();
+        }
+
     }
+    
+    public static void saludo(){
+        System.out.println("Hola Mundo desde la funcion");
+    }
+    
+    private static  int sumar(int a, int b){
+        return a + b;
+    }   
 }
+
